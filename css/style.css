@@ -1,0 +1,533 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --light-color: #fff;
+    --dark-color: #000;
+    --primary-color: #a48f7a;
+    --overlay-color: rgba(0, 0, 0, 0.3); 
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------Utilities---------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+
+/* Containers */
+.showcase {
+    height: 100vh;
+    position: relative;
+}
+
+.small-showcase {
+    height: 20vh;
+}
+
+.container {
+    height: inherit;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Overlay */
+.showcase:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+}
+
+/* Showcase Content */
+.showcase * {
+    z-index: 1;
+}
+
+
+/* Text Colors */
+.primary-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.9rem;
+    margin: 0 0.3rem;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    font-weight: 300;
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--light-color);
+}
+
+.btn-secondary {
+    font-weight: 600;
+    color: var(--light-color);
+    text-decoration: underline;
+}
+
+/* Button Hover */
+.btn-primary:hover {
+    background: transparent;
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+}
+
+.btn-secondary:hover {
+    opacity: 0.6;
+}
+
+/* Headings */
+h1 {
+    font-size: 5rem;
+    font-weight: 100;
+    margin: 4.5rem 0;
+    margin-top: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------Style------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Navbar */
+.menu-wrap {
+    display: none;
+}
+
+#navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 0 2.5rem;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nav Brand */
+#navbar .nav-brand {
+    color: var(--light-color);
+    font-size: 1.9rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+#navbar .nav-brand:hover {
+    opacity: 0.7;
+}
+
+/* Navbar Links */
+#navbar .nav-links {
+    color: var(--light-color);
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding: 0.7rem 1.2rem;
+    margin: 0 0.7rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Nav links Hover */
+#navbar .nav-links:hover {
+    opacity: 0.7;
+}
+
+/* Active Nav Link */
+#navbar .nav-links.active {
+    border: 1px solid var(--light-color);
+}
+
+/* Index Showcase */
+#index-showcase {
+    background: url("../img/index-showcase.png") center center/cover no-repeat;
+}
+
+#index-showcase .showcase-content {
+    color: var(--light-color);
+    height: 80vh;
+}
+
+
+/* Section - Head Chef */
+#head-chef {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#head-chef .col:first-child {
+    background: url("../img/head-chef.png") center center/cover no-repeat;
+    height: 400px;
+    flex: 0.6;
+    margin-right: 6rem;
+}
+
+#head-chef .col:last-child {
+    padding: 0 5rem;
+}
+
+/* Section - Menu */
+#menu {
+    height: 200vh;
+}
+
+/* Menu Headings */
+#menu .container h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+#menu .container h2, #menu .container p {
+    align-self: center;
+}
+
+#menu .primary-text {
+    font-size: 0.8rem;
+}
+
+/* Menu Items */
+#menu .flex-container {
+    padding-top: 100px;
+    width: 100%;
+}
+
+#menu .flex-container .col {
+    margin-left: 1.8rem;
+}
+
+#menu .flex-container .col:first-child {
+    margin-right: 5rem;
+}
+
+#menu .flex-container .col .item {
+    position: relative;
+    padding: 3rem 0
+}
+
+/* Seperating items bar */
+#menu .flex-container .col .item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 20%;
+    background: var(--primary-color);
+}
+
+/* Menu Columns */
+#menu .container .flex-container .col {
+    height: 100%;
+}
+
+#menu .container .flex-container .col:nth-child(2) {
+    flex: 1.9;
+}
+
+/* Menu Items - Cocktails */
+#menu .container #cocktails .col:nth-child(2) {
+    background: url("../img/cocktail-1.png") center center/cover no-repeat;
+}
+
+#menu .container #cocktails .col:nth-child(3) {
+    background: url("../img/cocktail-2.png") center center/cover no-repeat;
+}
+
+/* Menu Items - Dinner */
+#menu .container #dinner .col:nth-child(2) {
+    background: url("../img/dinner-1.png") center center/cover no-repeat;
+}
+
+#menu .container #dinner .col:nth-child(3) {
+    background: url("../img/dinner-2.png") center center/cover no-repeat;
+}
+
+/* Section - Reserve */
+#reserve {
+    margin-top: 5rem;
+    background: url("../img/reserve-showcase.png") center center/cover no-repeat;
+    color: var(--light-color);
+}
+
+#reserve .btn {
+    margin: 2.5rem 0;
+}
+
+#reserve p i {
+    opacity: 0.8;
+}
+
+/* Section - Farm */
+#farm {
+    height: 180vh;
+}
+
+#farm .container {
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+
+/* Farm showcase */
+#farm div:last-child {
+    height: 120vh;
+    background: url("../img/farm-showcase.png") center center/cover no-repeat;
+}
+
+/* Catering */
+#catering {
+    height: 50vh;
+}
+
+#catering .flex-container {
+    justify-content: space-between;
+}
+
+#catering .flex-container .col:first-child {
+    flex: 2;
+}
+
+#catering .flex-container .col:last-child {
+    text-align: right;
+}
+
+/* Catering Button */
+#catering .btn-primary {
+    background: var(--dark-color);
+    border: 1px var(--dark-color) solid;
+    color: var(--light-color);
+}
+
+#catering .btn-primary:hover {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Footer */
+footer {
+    height: 30vh;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+footer .container {
+    align-items: flex-end;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------Menu Style-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Section - Dinner Menu */
+#dinner-menu {
+    padding: 2rem 0;
+}
+
+#dinner-menu .container {
+    align-items: center;
+    text-align: center;
+}
+
+#dinner-menu .flex-container {
+    position: relative;
+    padding: 5rem 0;
+}
+
+#dinner-menu .flex-container .col {
+    padding: 0 1rem;
+}
+
+#dinner-menu .flex-container .col > div {
+    width: 100%;
+    height: 350px;
+}
+
+#dinner-menu .flex-container .col > p {
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+    line-height: 1.8rem;
+}
+
+/* Course Images */
+#dinner-menu .flex-container .col:nth-child(1) > div {
+    background: url("../img/course-1.png") center center/cover no-repeat;
+}
+
+#dinner-menu .flex-container .col:nth-child(2) > div {
+    background: url("../img/course-2.png") center center/cover no-repeat;
+}
+
+#dinner-menu .flex-container .col:nth-child(3) > div {
+    background: url("../img/course-3.png") center center/cover no-repeat;
+}
+
+/* Section Seperation */
+#dinner-menu .flex-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    background: var(--primary-color);
+    width: 45%;
+    height: 1px;
+}
+
+/* Menu Button */
+#dinner-menu .btn {
+    margin: 4rem 0;
+}
+
+#dinner-menu .btn-primary {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+}
+
+#dinner-menu .btn-primary:hover {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------Local Style------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Section - Local Menu */
+#local {
+    padding: 2rem 0;
+}
+
+#local .container {
+    align-items: center;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+#local .container p {
+    margin: 0 13rem;
+    margin-bottom: 1.5rem;
+}
+
+#local .flex-container {
+    width: 100%;
+    padding: 5rem 10rem;
+    height: 700px;
+}
+
+#local .flex-container .col {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    margin: 0 0.3rem;
+}
+
+#local .flex-container .col:first-child {
+    flex-grow: 2.2;
+}
+
+#local .flex-container .col > div {
+    height: 100%;
+    width: 100%;
+    margin: 0.3rem 0;
+}
+
+/* Local Showcase Images */
+#local .flex-container .col:nth-child(1) > div{
+    background: url("../img/local-1.png") center center/cover no-repeat;
+}
+
+#local .flex-container .col:nth-child(2) div:first-child {
+    background: url("../img/local-2.png") center center/cover no-repeat;
+}
+
+#local .flex-container .col:nth-child(2)  div:last-child {
+    background: url("../img/local-3.png") center center/cover no-repeat;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------Contact Style----------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Section - contact */
+
+#contact {
+    height: 50vh;
+}
+
+#contact .container {
+    align-items: center;
+    text-align: center;
+}
+
+#contact .flex-container .flex-container {
+    margin: 3.5rem 2rem;
+}
+
+#contact .flex-container .flex-container .col {
+    padding: 0 2rem;
+}
+
+#contact .flex-container .flex-container h2 {
+    font-size: 1.2rem;
+}
+
